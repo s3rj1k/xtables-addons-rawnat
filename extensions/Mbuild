@@ -1,0 +1,3 @@
+# -*- Makefile -*-
+
+obj-${build_RAWNAT}      += libxt_RAWDNAT.so libxt_RAWSNAT.so

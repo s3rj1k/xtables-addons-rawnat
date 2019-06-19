@@ -1,0 +1,12 @@
+# -*- Makefile -*-
+
+include ${XA_ABSTOPSRCDIR}/mconfig
+-include ${XA_ABSTOPSRCDIR}/mconfig.*
+
+obj-${build_RAWNAT}      += xt_RAWNAT.o iptable_rawpost.o
+ifneq (${CONFIG_IP6_NF_IPTABLES},)
+obj-${build_RAWNAT}      += ip6table_rawpost.o
+endif
+
+-include ${M}/*.Kbuild
+-include ${M}/Kbuild.*
