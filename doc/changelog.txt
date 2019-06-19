@@ -1,6 +1,9 @@
 
 HEAD
 ====
+Changes
+- add a new implementation of the rawpost table, based on mainline code
+- restore RAWSNAT/RAWDNAT code
 
 
 v3.3 (2019-03-07)
