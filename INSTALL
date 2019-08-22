@@ -3,7 +3,9 @@ Installation instructions for Xtables-addon-RAWNAT
 
 Xtables-addon-RAWNAT uses the well-known configure(autotools) infrastructure
 in combination with the kernel's Kbuild system.
-
+	
+	# apt install linux-headers-$(uname -r) gcc make autoconf libtool pkg-config libxtables-dev libelf-dev
+	$ ./autogen.sh
 	$ ./configure
 	$ make
 	# make install
