@@ -3,13 +3,22 @@ Installation instructions for Xtables-addon-RAWNAT
 
 Xtables-addon-RAWNAT uses the well-known configure(autotools) infrastructure
 in combination with the kernel's Kbuild system.
-	
+
 	# apt install linux-headers-$(uname -r) gcc make autoconf libtool pkg-config libxtables-dev libelf-dev
 	$ ./autogen.sh
 	$ ./configure
 	$ make
 	# make install
 
+To use DKMS:
+	# apt install dkms
+	# git clone https://github.com/s3rj1k/xtables-addons-rawnat /usr/src/xtables-addon-rawnat-20190902
+	# dkms add -m xtables-addon-rawnat -v 20190902
+	# dkms build -m xtables-addon-rawnat -v 20190902
+	# dkms install -m xtables-addon-rawnat -v 20190902
+
+To autoload module on boot:
+	# echo "xt_RAWNAT" > /etc/modules-load.d/rawnat.conf
 
 Supported configurations for this release
 =========================================
